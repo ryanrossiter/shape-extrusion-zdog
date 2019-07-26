@@ -1,0 +1,30 @@
+{
+  "name": "shape-extrusion-zdog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "next",
+    "build-package": "npx babel src --out-dir dist",
+    "pages-build": "next build",
+    "pages-export": "next export && touch out/.nojekyll",
+    "pages-push": "gh-pages -d out --dotfiles",
+    "deploy": "npm run pages-build && npm run pages-export && npm run pages-push"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-zdog": "^1.0.10",
+    "zdog": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "gh-pages": "^2.0.1",
+    "next": "^9.0.2"
+  }
+}
